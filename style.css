@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'TT Lakes Thin';
+    src: url('шрифт/TTLakes-Thin.eot');
+    src: url('шрифт/TTLakes-Thin.eot?#iefix') format('embedded-opentype'),
+    url('шрифт/TTLakes-Thin.woff') format('woff'),
+    url('шрифт/TTLakes-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+body{
+    margin:0;
+    padding:0;
+}
+
+.upper-menu{
+    display: flex;
+    justify-content:space-between;
+    height: 88px;
+    margin-left: 25px;
+    margin-right: 25px;
+    align-items: center;
+    gap: 15px;
+}
+
+.main-part{
+    display: flex;
+    gap:25px;
+    background-color: #F8F8F8;
+    flex-wrap: wrap;
+    padding: 15px;
+    padding-bottom: 30px;
+    justify-content: space-between;
+}
+
+.icon{
+    margin-left: -15px;
+}
+
+.ric{
+    display: none;
+    margin-left: auto;
+    height: 40px;
+    margin-right: 20px;
+    align-items: center;
+    padding-top: 20px;
+    
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: right;
+}
+
+.side-menu{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    /* box-sizing: border-box; */
+    /* margin-left: 25px; */
+    /* margin-right: 25px; */
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+li:first-child{
+    border: 2px solid #B8FFEC;
+    border-radius: 6%;
+}
+
+li{
+    max-height: 40px;
+    font-family:'TT Lakes Thin';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 4px 15px;
+    white-space: nowrap;
+    letter-spacing: -0.20000000298023224px;
+    background: linear-gradient(to right);
+}
+
+.text{
+    margin: 0;
+    padding: 0;
+    margin-right: 15px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: left;
+    font-weight: 1000;
+    overflow: hidden;
+    min-width: 288px;
+    font-family: "TT Lakes Thin";
+}
+
+.text-all{
+    width: 50%;
+    flex-basis: auto;
+}
+
+* { 
+    font-family:'TT Lakes Thin';
+}
+
+.title{
+    display: flex;
+    justify-content:flex-start;
+}
+
+.title-text{
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6000000238418579px;
+    text-align: left;
+    margin-left: 16px;
+    font-family:'TT Lakes Medium';
+    font-weight: 1000;
+
+}
+
+.read-all{
+    display: flex;
+    margin-top: 15px;
+}
+
+.read-all-text{
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+}
+
+
+.hidden{
+    display: none;
+}
+
+
+.grid{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.image_class{
+}
+
+.image{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.rigth{
+    display: flex;
+    justify-content:flex-end;
+    gap: 15px;
+}
+
+.left{
+    display: flex;
+    justify-content:flex-start;
+    gap: 15px;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+@media (min-width: 320px) {
+    .text{
+        max-height: 90px;
+    }
+}
+
+
+@media (min-width: 784px) {
+    .hidden{
+        display: block;
+    }
+    .text{
+        max-height: 160px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .main-part{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .icon{
+        margin-left: -25px;
+    }
+    .main-part{
+        padding: 25px;
+        gap: 30px;
+    }
+
+    .image{
+        margin-left: 0;
+        margin-right: 0;
+        width: 50%;
+        object-fit: contain;
+    }
+    .grid{
+        flex-wrap:nowrap;
+    }
+}
+
+@media (min-width: 1121px) {
+    .upper-menu{
+        display: none;
+    }
+    .ric{
+        display: block;
+    }
+    .side-menu{
+        flex-wrap: wrap;
+        row-gap: 1ch;
+    }
+    .icon{
+        margin-left: -35px;
+    }
+    .main-part{
+        padding: 35px;
+    }
+    .text{
+        padding: 0 10px;
+    }
+
+
+}
+
+
+
