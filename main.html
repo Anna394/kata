@@ -8,39 +8,42 @@
   <body>
     <header>
       <div class="upper-menu">
+
         <div class="left-side">
-          <img src="burger.svg">
+          <div class="circle burger"></div>
           <img class="hidden" src="divider.svg">
           <img src="Group.svg">
         </div>
 
         <div class="rigth-side">
-          <img class="hidden" src="call.svg">
-          <img class="hidden" src="chat.svg">
-          <img class="hidden" src="profile.svg">
+          <div class="circle call hidden"></div>
+          <div class="circle chat hidden"></div>
+          <div class="circle profile hidden"></div>
           <img src="divider.svg">
-          <img src="repair.svg">
-          <img src="checkstatus.svg">
+          <div class="circle repair"></div>
+          <div class="circle checkstatus"></div>
         </div>
+
       </div>
     </header>
+
     <main>
 
       <div class="main-part">
 
-        <div class="title">
-          <img class="title__icon" src="highlight.svg">
-          <span class = 'title__text'>Услуги и сервисы</span>
-        </div>
+      <div class="title">
+          <h1>Услуги и сервисы</h1>
+      </div>
 
       <div class="repair-and-checkstatus">
         <div class="rigth-side">
-          <button> Оставить заявку<img src="repair.svg"></button>
+          <button>Оставить заявку<img src="repair.svg"></button>
           <button>Статус ремонта<img src="checkstatus.svg"></button>
         </div>
       </div>
-
-      <ol class = "side-menu">
+      
+      <nav>
+      <ul class = "side-menu">
         <li><button>Ремонтируемые бренды</button></li>
         <li><button>Ремонтируемые устройства</button></li>
         <li><button>Дополнительные услуги</button></li>
@@ -48,21 +51,29 @@
         <li><button>Адреса сервисных центров</button></li>
         <li><button>Специальные цены</button></li>
         <li><button>Отзывы</button></li>
-      </ol>
+      </ul>
+    </nav>
 
       <div class = "group">
-      <div class="description">
-        <p class="description__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
-        <br>
-        <br>
-        Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
-        <div class="description__read-all">
-          <img src="expand.svg">
-          <span class="description__read-all-text">Читать далее</span>
+        <div class="description">
+
+          <div class="description__text">
+            <p>
+              Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+            </p>
+            <p>
+               Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+            </p>
+          </div>
+      
+        <button class="description__read-all">
+          Читать далее
+        </button>
+
         </div>
-      </div>
 
       <img class="image" src="main.jpg">
+    </div>
 
   </div>
 
