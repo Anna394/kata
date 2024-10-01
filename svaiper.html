@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles-svaiper.css"> 
+</head>
+<body>
+    <header>
+        <h1>РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h1>
+    </header>
+    
+    <main>
+        <div class="swiper-wrapper-container" style="overflow: hidden;">
+        <!-- Разметка для Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper brands-grid">
+                <div class="swiper-slide brand Lenovo">
+                    <a href="#" class="button-circle"></a>
+                </div>
+                <div class="swiper-slide brand Samsung"">
+                    <a href="#" class="button-circle"></a> 
+                </div>
+                <div class="swiper-slide brand apple">
+                    <a href="#" class="button-circle"></a>
+                </div>
+                <div class="swiper-slide brand Bosch">
+                    <a href="#" class="button-circle"></a>
+                </div>
+                <div class="swiper-slide brand hp">
+                    <a href="#" class="button-circle"></a>
+                </div>
+                <div class="swiper-slide brand acer">
+                    <a href="#" class="button-circle"></a>
+                </div>
+                <div class="swiper-slide brand viewsonic">
+                    <a href="#" class="button-circle"></a>
+                </div>
+                <div class="swiper-slide brand sony">
+                    <a href="#" class="button-circle"></a>
+                </div>
+                <div class="swiper-slide brand Lenovo">
+                    <a href="#" class="button-circle"></a>
+                </div>
+                <div class="swiper-slide brand Samsung">
+                    <a href="#" class="button-circle"></a>
+                </div>
+                <div class="swiper-slide brand apple">
+                    <a href="#" class="button-circle"></a>
+                </div>
+            </div>
+            
+            <!-- Пагинация (точки) -->
+            <div class="swiper-pagination"></div>
+        </div>
+        </div>
+    </main>
+    
+        <button id="toggleButton">Показать все</button> 
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+
+let swiper = null;
+
+function enableSwiper() {
+    if (!swiper) {
+        swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            on: {
+                slideChange: function () {
+                    applyShadowToSecondSlide(); 
+                }
+            }
+        });
+        applyShadowToSecondSlide();
+    }
+}
+
+function disableSwiper() {
+    if (swiper) {
+        removeShadowFromAllSlides();
+
+        swiper.destroy(true, true); 
+        swiper = null; 
+    }
+}
+
+function removeShadowFromAllSlides() {
+    var slides = document.querySelectorAll('.swiper-slide');
+    slides.forEach(function(slide) {
+        slide.classList.remove('active-shadow'); 
+    });
+}
+
+function toggleSwiper() {
+    const screenWidth = window.innerWidth;
+    console.log('Current screen width:', screenWidth); 
+
+    if (screenWidth <= 768) {
+        enableSwiper(); 
+    } else {
+        disableSwiper(); 
+    }
+}
+
+function applyShadowToSecondSlide() {
+    var slides = document.querySelectorAll('.swiper-slide');
+
+    slides.forEach(function(slide) {
+        slide.classList.remove('active-shadow'); 
+    });
+
+    var secondVisibleSlide = slides[swiper.activeIndex + 1];
+    if (secondVisibleSlide) {
+        secondVisibleSlide.classList.add('active-shadow');
+        console.log('Shadow added to second visible slide'); 
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    toggleSwiper(); 
+});
+
+window.addEventListener('resize', function () {
+    console.log('Resize event fired'); 
+    toggleSwiper(); 
+});
+
+document.getElementById("toggleButton").addEventListener("click", function() {
+    var brandsGrid = document.querySelector(".brands-grid"); 
+
+    if (brandsGrid.style.overflow === "hidden" || brandsGrid.style.overflow === "") {
+        brandsGrid.style.overflow = "visible"; 
+        brandsGrid.style.maxHeight = "700px"; 
+        this.textContent = "Скрыть"; 
+        this.style.backgroundImage = "url('expand2.svg')";
+    } else {
+        brandsGrid.style.overflow = "hidden"; 
+        brandsGrid.style.maxHeight = "170px"; 
+        this.textContent = "Показать все"; 
+        this.style.backgroundImage = "url('expand.svg')";
+    }
+});
+
+    </script>
+</body>
+</html>
