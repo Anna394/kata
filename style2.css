@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'TT Lakes Thin';
+    src: url('шрифт/TTLakes-Thin.eot');
+    src: url('шрифт/TTLakes-Thin.eot?#iefix') format('embedded-opentype'),
+    url('шрифт/TTLakes-Thin.woff') format('woff'),
+    url('шрифт/TTLakes-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'TT Lakes Medium';
+        src: url('шрифт/TTLakes-Medium.eot');
+        src: url('шрифт/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+        url('шрифт/TTLakes-Medium.woff') format('woff'),
+        url('шрифт/TTLakes-Medium.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+    @font-face {
+            font-family: 'TT Lakes Light';
+            src: url('шрифт/TTLakes-Light.eot');
+            src: url('шрифт/TTLakes-Light.eot?#iefix') format('embedded-opentype'),
+            url('шрифт/TTLakes-Light.woff') format('woff'),
+            url('шрифт/TTLakes-Light.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            }
+
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    .circle{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #FF437D; 
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-side{
+        display: flex;
+        justify-content:flex-start;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .rigth-side{
+        display: flex;
+        justify-content:flex-end;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .exit{
+        background-image: url('exit.svg');
+    }
+
+    .search{
+        background-image: url('search.svg');
+    }
+
+    .call{
+        background-image: url('call.svg');
+    }
+    
+    .chat{
+        background-image: url('chat.svg');
+    }
+    
+    .profile{
+        background-image: url('profile.svg');
+    }
+    
+    .sidebar {
+        position: fixed;
+        width: 320px;
+        height: 100%;
+        box-shadow: 10px 0 20px -5px rgba(14, 24, 80, 0.2), /* Тень с начальным цветом */
+                    20px 0 40px -10px rgba(69, 79, 126, 0.03); /* Тень с конечным цветом */
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        font-family: "TT Lakes Light";
+        font-weight: 1000;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.20000000298023224px;
+        text-align: left;
+    }
+
+    .upper-menu{
+        display: flex;
+        justify-content:space-between;
+        height: 88px;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    
+    nav {
+        flex-grow: 1;
+    }
+    
+    nav a {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        color:#1B1C21;
+        text-decoration: none;
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+    }
+
+    nav a:first-child {        
+        margin-left: -20px;
+        padding-left: 20px;
+        background-image: url('highlight.svg'); /* Ссылка на иконку */
+        background-repeat: no-repeat;
+        color: #888888; /* Серый цвет текста */
+    }
+
+
+    nav a:last-child {
+        margin-bottom: 0; /* Убираем отступ снизу у последнего элемента */
+    }
+    
+    nav a:hover {
+        opacity: 0.6;
+    }
+
+    .contact{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .contact, .languages {
+        margin-top: auto; /* Автоматические отступы сверху для прикрепления к нижней части */
+    }
+    
+    .contact a, .languages a {
+        display: block;
+        text-decoration: none;
+        margin-bottom: 10px;
+        transition: opacity 0.3s ease;
+    }
+    
+    .contact a:hover, .languages a:hover {
+        opacity: 0.6;
+    }
+    
+    .languages a {
+        color: black; /* Для languages */
+        display: inline-block;
+        margin-right: 10px;
+    }
+    
+    .languages a:last-child {
+        margin-right: 0;
+    }
+
+    .phone{
+        font-family:'TT Lakes Medium';
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.6000000238418579px;
+        text-align: left;
+    }
+    
